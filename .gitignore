@@ -1,2 +1,6 @@
 .vscode/tasks.json
 hashmap/prac.exe
+hashmap/letter_combinations_of_phone_number.exe
+hashmap/longest_substring_without_reapeating_charecters.exe
+hashmap/vc140.pdb
+*.exe
