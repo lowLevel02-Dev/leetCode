@@ -3,17 +3,17 @@ using namespace std;
 
 class Solution{
 public:
-    vector<int>sortparity(vector<int>&nums){
+    vector<int> sortparity(vector<int>&nums){
         int left = 0; 
-        int right = nums.size() - 1;
+        int right = 1;
         vector<int>ans(nums.size(),0);
         for(int trace = 0; trace < nums.size(); trace++){
             if(nums[trace] % 2 == 0){
                 ans[left] = nums[trace]; 
-                left++;
+                left = left + 2;
             }else{
                 ans[right] = nums[trace];
-                right--;
+                right = right + 2;
             }
         }
         return ans;
@@ -22,7 +22,7 @@ public:
 
 int main(){
     Solution sol; 
-    vector<int>nums = {}; 
+    vector<int>nums = {4,2,5,7}; 
     vector<int>res = sol.sortparity(nums);
     for(int i = 0; i < res.size(); i++){
         cout<<res[i]<<" ";
